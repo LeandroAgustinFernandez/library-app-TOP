@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap");
+
+.body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.hideForm {
+  display: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #153259;
+  color: white;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+}
+.newBook {
+  background-color: #0468bf;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 20px/25px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: box-shadow 0.5s;
+}
+.newBook:hover {
+  box-shadow: 2px 1px 5px #05aff2, -2px -1px 5px #05aff2;
+}
+.main {
+  background-color: #0468bf;
+  padding: 20px;
+  color: antiquewhite;
+  flex: 1;
+}
+.form {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.table-content {
+  width: 100%;
+  border-spacing: 0px;
+  padding: 1rem 10rem;
+}
+.table-content th,
+.table-content td {
+  border: 1px solid;
+  margin: 0;
+}
+.table-content th {
+  padding: 10px;
+  background-color: white;
+  color: #032973;
+  font-size: 1.1rem;
+  border-color: white;
+}
+.table-content td {
+  padding: 8px;
+}
+.form-group {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+}
+.form-group > input {
+  padding: 5px;
+}
+.form-group button {
+  background-color: #0468bf;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px/25px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: box-shadow 0.5s;
+}
+.form-group button:hover {
+  box-shadow: 2px 1px 5px #05aff2, -2px -1px 5px #05aff2;
+}
+.footer {
+  background-color: #032973;
+  height: 80px;
+  color: antiquewhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.github {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+}
+.noBooks {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+td > .fa-solid {
+  padding: 0 10px;
+}
+@media (max-width: 1440px) {
+  .table-content {
+    width: 100%;
+    border-spacing: 0px;
+    padding: 1rem 5rem;
+  }
+}
+@media (max-width: 1024px) {
+  .table-content {
+    width: 100%;
+    border-spacing: 0px;
+    padding: 1rem 5rem;
+  }
+}
+@media (max-width: 768px) {
+  .table-content {
+    width: 100%;
+    border-spacing: 0px;
+    padding: 1rem 1rem;
+  }
+}
+@media (max-width: 425px) {
+  .table-content {
+    width: 100%;
+    border-spacing: 0px;
+    padding: 0;
+  }
+}

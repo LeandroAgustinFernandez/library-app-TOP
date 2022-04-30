@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library App</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css"
+      integrity="sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="body">
+    <header class="header">
+      <h1>My Library</h1>
+      <button class="newBook"><i class="fa-solid fa-plus"></i> New book</button>
+    </header>
+    <section class="form-section ">
+      <article>
+        <form action="" method="post" class="form">
+          <div class="form-group">
+            <label for="">Title</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div class="form-group">
+            <label for="">Author</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div class="form-group">
+            <label for="">Pages</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div class="form-group">
+            <label for=""
+              >Have you read it?
+              <input type="checkbox" name="" id="" />
+            </label>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="addBook">Send</button>
+          </div>
+        </form>
+      </article>
+    </section>
+    <main class="main">
+      <section class="library-section">
+        <article>
+          <table class="table-content">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Read</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody class="bookList"></tbody>
+          </table>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <span class="label-copy">&copy; Leandro Fernandez</span>
+      <a href="" class="github"><i class="fa-brands fa-github"></i></a>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
