@@ -19,25 +19,29 @@
       <h1>My Library</h1>
       <button class="newBook"><i class="fa-solid fa-plus"></i> New book</button>
     </header>
-    <section class="form-section ">
+    <section class="form-section hideForm">
+      <article class="errorMessage hideMessage">
+        <!-- hideMessage -->
+        <span>Must complete all the fields</span>
+      </article>
       <article>
         <form action="" method="post" class="form">
           <div class="form-group">
-            <label for="">Title</label>
-            <input type="text" name="" id="" />
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" />
           </div>
           <div class="form-group">
-            <label for="">Author</label>
-            <input type="text" name="" id="" />
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author" />
           </div>
           <div class="form-group">
-            <label for="">Pages</label>
-            <input type="text" name="" id="" />
+            <label for="pages">Pages</label>
+            <input type="text" name="pages" id="pages" />
           </div>
           <div class="form-group">
-            <label for=""
+            <label for="read"
               >Have you read it?
-              <input type="checkbox" name="" id="" />
+              <input type="checkbox" name="read" id="read" />
             </label>
           </div>
           <div class="form-group">
@@ -66,9 +70,14 @@
     </main>
     <footer class="footer">
       <span class="label-copy">&copy; Leandro Fernandez</span>
-      <a href="" class="github"><i class="fa-brands fa-github"></i></a>
+      <a
+        href="https://github.com/LeandroAgustinFernandez/library-app-TOP"
+        target="_blank"
+        class="github"
+      >
+        <i class="fa-brands fa-github"></i>
+      </a>
     </footer>
-
     <script src="js/script.js"></script>
   </body>
 </html>
