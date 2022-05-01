@@ -1,3 +1,4 @@
+let myLibrary = [];
 const bookList = document.querySelector(".bookList");
 const newBook = document.querySelector(".newBook");
 const addBook = document.querySelector(".addBook");
@@ -21,13 +22,6 @@ function changeIcon() {
   }
 }
 
-let myLibrary = [
-  { title: "Indiana Jones", author: "juanito", pages: 123, read: true },
-  { title: "Indiana Jones", author: "juanito", pages: 123, read: false },
-  { title: "Indiana Jones", author: "juanito", pages: 123, read: false },
-  { title: "Indiana Jones", author: "juanito", pages: 123, read: true },
-];
-// let myLibrary = [];
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
@@ -68,8 +62,8 @@ function createBook(e) {
 function showError(state) {}
 
 function listBooks() {
+  bookList.innerHTML = "";
   if (myLibrary.length != 0) {
-    bookList.innerHTML = "";
     myLibrary.forEach((book) => {
       let tr = document.createElement("tr");
       let tdTitle = document.createElement("td");
@@ -77,21 +71,21 @@ function listBooks() {
       let tdPages = document.createElement("td");
       tdPages.style.textAlign = "right";
       let tdRead = document.createElement("td");
-      tdRead.style.width = "150px";
+      tdRead.style.width = "120px";
       tdRead.style.textAlign = "center";
       let tdActions = document.createElement("td");
-      tdActions.setAttribute("style", "text-align:center;width:150px");
+      tdActions.setAttribute("style", "text-align:center;width:120px");
       tdTitle.textContent = book.title;
       tdAuthor.textContent = book.author;
       tdPages.textContent = book.pages;
       tdRead.innerHTML = book.read
         ? '<i class="fa-solid fa-book-open"></i>'
         : '<i class="fa-solid fa-book"></i>';
-      tdActions.innerHTML = `<i class="fa-solid fa-eraser" data-index='${myLibrary.indexOf(
+      tdActions.innerHTML = `<i class="fa-solid fa-eraser" onclick='remove(${myLibrary.indexOf(
         book
-      )}'></i><i class="fa-solid fa-glasses" data-index='${myLibrary.indexOf(
+      )})'></i><i class="fa-solid fa-glasses" onclick='changeStateRead(${myLibrary.indexOf(
         book
-      )}'></i>`;
+      )})'></i>`;
       tr.appendChild(tdTitle);
       tr.appendChild(tdAuthor);
       tr.appendChild(tdPages);
@@ -108,6 +102,18 @@ function listBooks() {
     tr.appendChild(td);
     bookList.appendChild(tr);
   }
+}
+
+function remove(index) {
+  myLibrary.splice(index, 1);
+  listBooks();
+}
+
+function changeStateRead(index) {
+  myLibrary[index].read
+    ? (myLibrary[index].read = false)
+    : (myLibrary[index].read = true);
+  listBooks();
 }
 
 window.addEventListener("load", listBooks);

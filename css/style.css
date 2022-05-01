@@ -63,14 +63,15 @@
   margin: 0;
 }
 .table-content th {
-  padding: 10px;
+  padding: 15px;
   background-color: white;
   color: #032973;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   border-color: white;
 }
 .table-content td {
-  padding: 8px;
+  padding: 12px;
+  font-size: 1.1rem;
 }
 .form-group {
   padding: 10px;
@@ -116,7 +117,9 @@
   font-weight: bold;
 }
 td > .fa-solid {
-  padding: 0 10px;
+  padding: 0 15px;
+  cursor: pointer;
+  font-size: 1.3rem;
 }
 @media (max-width: 1440px) {
   .table-content {
