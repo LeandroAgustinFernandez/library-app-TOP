@@ -40,7 +40,7 @@ function createBook(e) {
     }
   }
   let message = document.querySelector(".errorMessage");
-  if (message.classList.contains("hideMessage") && empty == true) {
+  if (empty == true) {
     message.classList.remove("hideMessage");
     return;
   }
