@@ -22,11 +22,13 @@ function changeIcon() {
   }
 }
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read == null ? false : true;
+class Book {
+  constructor(title, author, pages, read){
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read == null ? false : true;
+  }
 }
 
 function createBook(e) {
@@ -110,9 +112,10 @@ function remove(index) {
 }
 
 function changeStateRead(index) {
-  myLibrary[index].read
-    ? (myLibrary[index].read = false)
-    : (myLibrary[index].read = true);
+  let book = myLibrary[index];
+  book.read
+    ? (book.read = false)
+    : (book.read = true);
   listBooks();
 }
 
